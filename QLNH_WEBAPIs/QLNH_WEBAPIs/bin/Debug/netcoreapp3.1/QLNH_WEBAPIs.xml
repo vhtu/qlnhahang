@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QLNH_WEBAPIs</name>
+    </assembly>
+    <members>
+        <member name="M:QLNH_WEBAPIs.Controllers.CategoryController.Get">
+            <summary>
+            Get all Categories
+            </summary> 
+        </member>
+        <member name="T:QLNH_WEBAPIs.Controllers.GuestController">
+            <summary>
+            API liên quan đến Guest
+            </summary>
+        </member>
+        <member name="T:QLNH_WEBAPIs.Controllers.GuestTableController">
+            <summary>
+            API liên quan đến GuestTable
+            </summary>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.ItemController.Get">
+            <summary>
+            Get all item
+            </summary> 
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.ItemController.Delete(System.Int64)">
+            <summary>
+            Deletes a specific Item.
+            </summary>
+            <param name="id"></param>        
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.ItemController.Post(QLNH_WEBAPIs.Models.Item)">
+            <summary>
+            Thêm Item mới
+            </summary>
+            <returns>Danh sách Item</returns>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.ItemController.Put(QLNH_WEBAPIs.Models.Item)">
+            <summary>
+            Cập nhật item
+            </summary>
+            <returns>Danh sách Item</returns>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.RoleController.Get">
+            <summary>
+            Lấy tất cả danh sách Roles
+            </summary>
+            <returns>Danh sách Roles</returns>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.RoleController.Get(System.Int32)">
+            <summary>
+            Lấy Role với Id
+            </summary>
+            <returns>Danh sách Role</returns>
+            <param name="Id">Tham số là Id của Role</param>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.RoleController.Post(QLNH_WEBAPIs.Models.Role)">
+            <summary>
+            Thêm Role mới
+            </summary>
+            <returns>Role</returns>
+        </member>
+        <member name="T:QLNH_WEBAPIs.Controllers.UserController">
+            <summary>
+            API liên quan đến User
+            </summary>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.#ctor(QLNH_WEBAPIs.Data.QuanlynhahangContext)">
+            <summary>
+            Hàm khởi tạo
+            </summary>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.Get">
+            <summary>
+            Get all User.
+            </summary>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.Delete(System.Int64)">
+            <summary>
+            Deletes a specific User.
+            </summary>
+            <param name="id"></param>        
+        </member>
+    </members>
+</doc>

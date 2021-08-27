@@ -7,19 +7,18 @@ using System.Threading.Tasks;
 
 namespace QLNH_WEBAPIs.Models
 {
-    [Table("Users")]
-    public class User
+    [Table("OrderItems")]
+    public class OrderItem
     {
         [Key]
         public int Id { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }
         public bool Deleted { get; set; }
-        public bool OffDuty { get; set; }
-        public virtual Role Role { get; set; }
-
+        public bool Voided { get; set; }
+        public double SalePrice { get; set; }
+        public virtual Item Item { get; set; }
     }
 }
