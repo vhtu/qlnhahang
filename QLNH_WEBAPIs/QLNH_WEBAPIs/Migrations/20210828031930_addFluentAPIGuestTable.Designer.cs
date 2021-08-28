@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QLNH_WEBAPIs.Data;
 
 namespace QLNH_WEBAPIs.Migrations
 {
     [DbContext(typeof(QuanlynhahangContext))]
-    partial class QuanlynhahangContextModelSnapshot : ModelSnapshot
+    [Migration("20210828031930_addFluentAPIGuestTable")]
+    partial class addFluentAPIGuestTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,9 +95,7 @@ namespace QLNH_WEBAPIs.Migrations
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Description")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("varchar(20)")
-                        .HasDefaultValue("Chưa có mô tả");
+                        .HasColumnType("longtext");
 
                     b.Property<int?>("GuestId")
                         .HasColumnType("int");
@@ -427,10 +427,7 @@ namespace QLNH_WEBAPIs.Migrations
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Description")
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)")
-                        .HasDefaultValue("Chưa có mô tả");
+                        .HasColumnType("longtext");
 
                     b.Property<bool>("OffDuty")
                         .HasColumnType("tinyint(1)");

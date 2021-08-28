@@ -50,7 +50,21 @@
         </member>
         <member name="M:QLNH_WEBAPIs.Controllers.RoleController.Get(System.Int32)">
             <summary>
-            Lấy Role với Id
+            Lấy Role với Id - Passing  Parameters Using From RouteAttribute
+            </summary>
+            <returns>Danh sách Role</returns>
+            <param name="Id">Tham số là Id của Role</param>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.RoleController.Get1(System.Int32)">
+            <summary>
+            Lấy Role với Id - Passing  Parameters Using From FromQuery
+            </summary>
+            <returns>Danh sách Role</returns>
+            <param name="Id">Tham số là Id của Role</param>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.RoleController.Get2(System.Int32,System.String)">
+            <summary>
+            Lấy Role với Id và Name - Passing  Parameters Using From FromQuery
             </summary>
             <returns>Danh sách Role</returns>
             <param name="Id">Tham số là Id của Role</param>
@@ -66,21 +80,11 @@
             API liên quan đến User
             </summary>
         </member>
-        <member name="M:QLNH_WEBAPIs.Controllers.UserController.#ctor(QLNH_WEBAPIs.Data.QuanlynhahangContext)">
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.Create(QLNH_WEBAPIs.DTOs.User.UserCreateRequest)">
             <summary>
-            Hàm khởi tạo
+            Thêm Role mới
             </summary>
-        </member>
-        <member name="M:QLNH_WEBAPIs.Controllers.UserController.Get">
-            <summary>
-            Get all User.
-            </summary>
-        </member>
-        <member name="M:QLNH_WEBAPIs.Controllers.UserController.Delete(System.Int64)">
-            <summary>
-            Deletes a specific User.
-            </summary>
-            <param name="id"></param>        
+            <returns>Role</returns>
         </member>
     </members>
 </doc>

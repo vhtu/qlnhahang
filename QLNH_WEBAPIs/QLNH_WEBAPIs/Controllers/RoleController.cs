@@ -30,12 +30,12 @@ namespace QLNH_WEBAPIs.Controllers
         }
 
         /// <summary>
-        /// Lấy Role với Id
+        /// Lấy Role với Id - Passing  Parameters Using From RouteAttribute
         /// </summary>
         /// <returns>Danh sách Role</returns>
         /// <param name="Id">Tham số là Id của Role</param>
 
-        //Passing  Parameters Using FromRouteAttribute
+        //Passing  Parameters Using From RouteAttribute
         // https://localhost:44364/api/Role/2
         [HttpGet("{Id}")]
         //public Role Get([FromQuery] int Id)
@@ -46,6 +46,12 @@ namespace QLNH_WEBAPIs.Controllers
                 .FirstOrDefault(); //Lấy role đầu tiên
         }
 
+
+        /// <summary>
+        /// Lấy Role với Id - Passing  Parameters Using From FromQuery
+        /// </summary>
+        /// <returns>Danh sách Role</returns>
+        /// <param name="Id">Tham số là Id của Role</param>
         //Passing  Parameters Using From FromQuery
         // https://localhost:44364/api/Role/getRole?Id=2
         [HttpGet("getRole")]
@@ -59,7 +65,11 @@ namespace QLNH_WEBAPIs.Controllers
 
         //Passing  multi Parameters Using From FromQuery
         // https://localhost:44364/api/Role/getRole1?id=2&name=user1
-
+        /// <summary>
+        /// Lấy Role với Id và Name - Passing  Parameters Using From FromQuery
+        /// </summary>
+        /// <returns>Danh sách Role</returns>
+        /// <param name="Id">Tham số là Id của Role</param>
         [HttpGet("getRole1")]
         //public Role Get([FromQuery] int Id)
         public Role Get2(int id, String name)

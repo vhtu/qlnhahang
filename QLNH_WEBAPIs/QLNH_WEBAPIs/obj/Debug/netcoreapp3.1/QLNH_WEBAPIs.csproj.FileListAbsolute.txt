@@ -57,3 +57,10 @@ F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Swa
 F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\obj\Debug\netcoreapp3.1\QLNH_WEBAPIs.MvcApplicationPartsAssemblyInfo.cs
 F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\QLNH_WEBAPIs.xml
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\System.Text.Json.dll

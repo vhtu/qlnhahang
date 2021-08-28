@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using QLNH_WEBAPIs.Data;
+using QLNH_WEBAPIs.Services.Users;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -34,6 +35,10 @@ namespace QLNH_WEBAPIs
             string mySqlConnection = Configuration.GetConnectionString("MyConn");
 
             services.AddDbContext<QuanlynhahangContext>(options => options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
+
+            //Declare DI
+            services.AddTransient<IUserService, UserService>();
+
 
             services.AddControllers();
 

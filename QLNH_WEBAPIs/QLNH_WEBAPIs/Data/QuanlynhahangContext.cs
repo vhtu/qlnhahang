@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using QLNH_WEBAPIs.Configurations;
 using QLNH_WEBAPIs.Models;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,9 @@ namespace QLNH_WEBAPIs.Data
     public class QuanlynhahangContext : DbContext
     {
 
-        private string connect_str = "Server=localhost;Database=quanlynhahang;Port=3306; uid=root; password=";
+        //private string connect_str = "Server=localhost;Database=quanlynhahang;Port=3306; uid=root; password=";
         public DbSet<User> Users { set; get; }      // bảng users
+        
         public DbSet<Item> Items { set; get; }      // bảng items
         public DbSet<test> Tests { set; get; }      // bảng items
         public DbSet<Category> Categories { set; get; }      // bảng items
@@ -29,7 +31,7 @@ namespace QLNH_WEBAPIs.Data
         public DbSet<Unit> Units { set; get; }      // bảng items
         public DbSet<UnitType> UnitTypes { set; get; }      // bảng items
 
-        public QuanlynhahangContext(DbContextOptions<QuanlynhahangContext> options, IConfiguration configuration):base(options)
+        public QuanlynhahangContext(DbContextOptions<QuanlynhahangContext> options):base(options)
         {
             //Database.EnsureCreated();
         }
@@ -46,6 +48,28 @@ namespace QLNH_WEBAPIs.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            // Fluent API, định nghĩa trực tiếp tại đây
+            modelBuilder.Entity<Category>(entity =>
+            {
+                entity.Property(e => e.Description)
+              //.HasColumnName("Mo_ta")    //Tùy chọn đặt lại tên cột Mo_ta (mặc định Description)
+              .HasColumnType("varchar(20)")  // kiểu varchar(20)
+              .HasDefaultValue("Chưa có mô tả")  // Giá trị mặc định
+              .HasMaxLength(20);             // Độ dài của trường dữ liệu 20
+            });
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.Property(e => e.Description)
+              //.HasColumnName("Mo_ta")    //Tùy chọn đặt lại tên cột Mo_ta (mặc định Description)
+              .HasColumnType("varchar(20)")  // kiểu varchar(20)
+              .HasDefaultValue("Chưa có mô tả")  // Giá trị mặc định
+              .HasMaxLength(20);             // Độ dài của trường dữ liệu 20
+            });
+
+
+            // khi định nghĩa Fluent API như ở bên trên (Category) có thể quá dài, we có thể tách ra thành file Configuration và add vào bên dưới
+            modelBuilder.ApplyConfiguration(new GuestConfiguration());
+            modelBuilder.ApplyConfiguration(new GuestTableConfiguration());
         }
     }
 }

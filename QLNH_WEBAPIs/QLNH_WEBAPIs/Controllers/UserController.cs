@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using QLNH_WEBAPIs.Data;
+using QLNH_WEBAPIs.DTOs.User;
 using QLNH_WEBAPIs.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using QLNH_WEBAPIs.Services.Users;
 using System.Threading.Tasks;
 
 namespace QLNH_WEBAPIs.Controllers
@@ -15,42 +13,39 @@ namespace QLNH_WEBAPIs.Controllers
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly QuanlynhahangContext _context;
-        /// <summary>
-        /// Hàm khởi tạo
-        /// </summary>
-        public UserController(QuanlynhahangContext context)
+        private readonly IUserService _userService;
+        public UserController(IUserService userService)
         {
-            _context = context;
+            _userService = userService;
         }
 
-        /// <summary>
-        /// Get all User.
-        /// </summary>
         [HttpGet]
-        public IEnumerable<User> Get()
+        public async Task<IActionResult> Get()
         {
-            return _context.Users.ToList();
+            var users = await _userService.GetAll();
+            return Ok(users);
         }
 
         /// <summary>
-        /// Deletes a specific User.
+        /// Thêm Role mới
         /// </summary>
-        /// <param name="id"></param>        
-        [HttpDelete("{id}")]
-        public IActionResult Delete(long id)
+        /// <returns>Role</returns>
+        [HttpPost]
+        public async Task<IActionResult> Create([FromForm] UserCreateRequest request)
         {
-            var user = _context.Users.Find(id);
+            var userId = await _userService.Create(request);
 
+            return Ok();
+        }
+
+
+        [HttpGet("{userId}")]
+        public async Task<IActionResult> GetById(int userId)
+        {
+            var user = await _userService.GetById(userId);
             if (user == null)
-            {
-                return NotFound();
-            }
-
-            _context.Users.Remove(user);
-            _context.SaveChanges();
-
-            return NoContent();
+                return BadRequest("Cannot find user");
+            return Ok(user);
         }
 
     }
