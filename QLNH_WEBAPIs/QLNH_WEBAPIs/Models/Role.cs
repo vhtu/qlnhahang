@@ -18,5 +18,6 @@ namespace QLNH_WEBAPIs.Models
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }
         public bool Deleted { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 }

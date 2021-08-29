@@ -12,10 +12,10 @@ namespace QLNH_WEBAPIs.Data
     public class QuanlynhahangContextFactory : IDesignTimeDbContextFactory<QuanlynhahangContext>
     {
 
-        /*
+        
         QuanlynhahangContext IDesignTimeDbContextFactory<QuanlynhahangContext>.CreateDbContext(string[] args)
         {
-            /*
+            
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
@@ -27,12 +27,9 @@ namespace QLNH_WEBAPIs.Data
             optionsBuilder.UseMySql(connect_str, ServerVersion.AutoDetect(connect_str));
 
             return new QuanlynhahangContext(optionsBuilder.Options);
-            *
+            
         }
-        */
-        public QuanlynhahangContext CreateDbContext(string[] args)
-        {
-            throw new NotImplementedException();
-        }
+        
+
     }
 }

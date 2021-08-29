@@ -30,16 +30,21 @@ namespace QLNH_WEBAPIs.Data
         public DbSet<Status> Statuses { set; get; }      // bảng items
         public DbSet<Unit> Units { set; get; }      // bảng items
         public DbSet<UnitType> UnitTypes { set; get; }      // bảng items
+        public object Configuration { get; }
+
 
         public QuanlynhahangContext(DbContextOptions<QuanlynhahangContext> options):base(options)
         {
             //Database.EnsureCreated();
+           
         }
         
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            
             base.OnConfiguring(optionsBuilder);
+            //optionsBuilder.UseLazyLoadingProxies();
             //optionsBuilder.UseMySql(connect_str, ServerVersion.AutoDetect(connect_str));
             //optionsBuilder.UseMySql(conn, ServerVersion.AutoDetect(conn));
 

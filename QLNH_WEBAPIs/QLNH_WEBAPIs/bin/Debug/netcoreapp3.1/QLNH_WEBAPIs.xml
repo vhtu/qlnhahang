@@ -82,9 +82,51 @@
         </member>
         <member name="M:QLNH_WEBAPIs.Controllers.UserController.Create(QLNH_WEBAPIs.DTOs.User.UserCreateRequest)">
             <summary>
-            Thêm Role mới
+            Thêm User mới
             </summary>
-            <returns>Role</returns>
+            <returns>User</returns>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.Update(QLNH_WEBAPIs.DTOs.User.UserUpdateRequest)">
+            <summary>
+            Cập nhật User mới
+            </summary>
+            <returns>User</returns>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.GetById(System.Int32)">
+            <summary>
+            Get user theo ID
+            </summary>
+            <returns>User</returns>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.UpdateUserName(System.Int32,System.String)">
+            <summary>
+            Cập nhật Username
+            </summary>
+            <returns>User</returns>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.UpdatePassword(System.Int32,System.String)">
+            <summary>
+            Cập nhật Password
+            </summary>
+            <returns>User</returns>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.UpdateDescription(System.Int32,System.String)">
+            <summary>
+            Cập nhật Description
+            </summary>
+            <returns>User</returns>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            Xóa user theo ID
+            </summary>
+            <returns>User</returns>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.GetListRoles(System.Int32)">
+            <summary>
+            Get Role user theo ID
+            </summary>
+            <returns>User</returns>
         </member>
     </members>
 </doc>

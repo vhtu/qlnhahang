@@ -64,3 +64,5 @@ F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Mic
 F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
 F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
 F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Castle.Core.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
