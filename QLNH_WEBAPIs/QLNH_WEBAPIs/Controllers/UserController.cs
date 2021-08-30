@@ -19,6 +19,9 @@ namespace QLNH_WEBAPIs.Controllers
             _userService = userService;
         }
 
+        /// <summary>
+        /// Lấy tất cả user
+        /// </summary>
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -70,7 +73,7 @@ namespace QLNH_WEBAPIs.Controllers
         /// <summary>
         /// Cập nhật Username
         /// </summary>
-        /// <returns>User</returns>
+        
         [HttpPut("{userId}/{newUserName}")]
         public async Task<IActionResult> UpdateUserName(int userId, string newUserName)
         {
@@ -85,7 +88,7 @@ namespace QLNH_WEBAPIs.Controllers
         /// <summary>
         /// Cập nhật Password
         /// </summary>
-        /// <returns>User</returns>
+        
         [HttpPut("{userId}/{newPassword}")]
         public async Task<IActionResult> UpdatePassword(int userId, string newPassword)
         {
@@ -100,7 +103,7 @@ namespace QLNH_WEBAPIs.Controllers
         /// <summary>
         /// Cập nhật Description
         /// </summary>
-        /// <returns>User</returns>
+        
         [HttpPut("{userId}/{newDescription}")]
         public async Task<IActionResult> UpdateDescription(int userId, string newDescription)
         {
@@ -114,7 +117,7 @@ namespace QLNH_WEBAPIs.Controllers
         /// <summary>
         /// Xóa user theo ID
         /// </summary>
-        /// <returns>User</returns>
+      
 
         [HttpDelete("{userId}")]
         public async Task<IActionResult> Delete(int userId)
@@ -128,7 +131,6 @@ namespace QLNH_WEBAPIs.Controllers
         /// <summary>
         /// Get Role user theo ID
         /// </summary>
-        /// <returns>User</returns>
         [HttpGet("Role/{userId}")]
         public async Task<IActionResult> GetListRoles(int userId)
         {
@@ -136,6 +138,32 @@ namespace QLNH_WEBAPIs.Controllers
             if (user == null)
                 return BadRequest("Cannot find user");
             return Ok(user);
+        }
+
+        /// <summary>
+        /// lấy ds user trả về theo định dạng UserViewModel
+        /// </summary>
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAll()
+        {
+            var users = await _userService.GetAll();
+            if (users == null)
+                return BadRequest("Cannot find user");
+            return Ok(users);
+        }
+
+
+
+        /// <summary>
+        /// lấy ds user trả về theo định dạng viewModelResult
+        /// </summary>
+        [HttpGet("allUser")]
+        public async Task<IActionResult> GetAllUser()
+        {
+            var userVM = await _userService.GetAllModel();
+            if (userVM == null)
+                return BadRequest("Cannot find user");
+            return Ok(userVM);
         }
 
     }

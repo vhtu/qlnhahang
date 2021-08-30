@@ -9,6 +9,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using QLNH_WEBAPIs.Exceptions;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using QLNH_WEBAPIs.ViewModels.Common;
 
 namespace QLNH_WEBAPIs.Services.Users
 {
@@ -84,7 +85,6 @@ namespace QLNH_WEBAPIs.Services.Users
                 Password = x.u.Password
             }).ToListAsync();
             return data;
-
         }
 
         public async Task<UserViewModel> GetById(int userId)
@@ -140,6 +140,62 @@ namespace QLNH_WEBAPIs.Services.Users
             if (user == null) throw new QuanlynhahangException($"Cannot find a user with id: {userID}");
             user.UserName = newUserName;
             return await _context.SaveChangesAsync() > 0;
+        }
+
+        public async Task<viewModelResult<UserViewModel>> GetAllModel()
+        {
+
+            var users = from u in _context.Users select u;
+
+            int totalRow = await users.CountAsync();
+
+            //cach 1
+            var data1 = new List<UserViewModel>();
+
+            foreach (var user in users)
+            {
+                data1.Add(new UserViewModel()
+                {
+                    Id = user.Id,
+                    UserName = user.UserName,
+                    Password = user.Password
+                });
+            }
+
+            // cach 2
+            var data2 = new List<UserViewModel>();
+
+            foreach (var user in users)
+            {
+                var uvm = new UserViewModel()
+                {
+                    Id = user.Id,
+                    UserName = user.UserName,
+                    Password = user.Password
+                };
+
+                data2.Add(uvm);
+            }
+
+
+            //cach 3
+            var data3 = await users.Select(user => new UserViewModel()
+            {
+                Id = user.Id,
+                UserName = user.UserName,
+                Password = user.Password
+            }).ToListAsync();
+
+
+            //tạo kết quả trả về theo đúng định dạng đã thiết kế gồm: total và list
+            var ketqua = new viewModelResult<UserViewModel>()
+            {
+                TotalRecords = totalRow,
+                Items = data3
+            };
+
+            return ketqua;
+
         }
     }
 }

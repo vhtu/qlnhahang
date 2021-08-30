@@ -80,6 +80,11 @@
             API liên quan đến User
             </summary>
         </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.Get">
+            <summary>
+            Lấy tất cả user
+            </summary>
+        </member>
         <member name="M:QLNH_WEBAPIs.Controllers.UserController.Create(QLNH_WEBAPIs.DTOs.User.UserCreateRequest)">
             <summary>
             Thêm User mới
@@ -102,31 +107,36 @@
             <summary>
             Cập nhật Username
             </summary>
-            <returns>User</returns>
         </member>
         <member name="M:QLNH_WEBAPIs.Controllers.UserController.UpdatePassword(System.Int32,System.String)">
             <summary>
             Cập nhật Password
             </summary>
-            <returns>User</returns>
         </member>
         <member name="M:QLNH_WEBAPIs.Controllers.UserController.UpdateDescription(System.Int32,System.String)">
             <summary>
             Cập nhật Description
             </summary>
-            <returns>User</returns>
         </member>
         <member name="M:QLNH_WEBAPIs.Controllers.UserController.Delete(System.Int32)">
             <summary>
             Xóa user theo ID
             </summary>
-            <returns>User</returns>
         </member>
         <member name="M:QLNH_WEBAPIs.Controllers.UserController.GetListRoles(System.Int32)">
             <summary>
             Get Role user theo ID
             </summary>
-            <returns>User</returns>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.GetAll">
+            <summary>
+            lấy ds user trả về theo định dạng UserViewModel
+            </summary>
+        </member>
+        <member name="M:QLNH_WEBAPIs.Controllers.UserController.GetAllUser">
+            <summary>
+            lấy ds user trả về theo định dạng viewModelResult
+            </summary>
         </member>
     </members>
 </doc>

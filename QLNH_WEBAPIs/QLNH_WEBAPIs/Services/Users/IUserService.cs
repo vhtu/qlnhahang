@@ -1,4 +1,5 @@
 ﻿using QLNH_WEBAPIs.DTOs.User;
+using QLNH_WEBAPIs.ViewModels.Common;
 using QLNH_WEBAPIs.ViewModels.User;
 using System;
 using System.Collections.Generic;
@@ -18,5 +19,6 @@ namespace QLNH_WEBAPIs.Services.Users
         Task<bool> updateUserName(int userID, string newUserName);
         Task<bool> updateDescription(int userID, string newDescription);
         Task<UserRoleViewModel> GeRole(int userId);
+        Task<viewModelResult<UserViewModel>> GetAllModel();
     }
 }
