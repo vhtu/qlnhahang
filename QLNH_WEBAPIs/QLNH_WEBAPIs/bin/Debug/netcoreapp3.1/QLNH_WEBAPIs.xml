@@ -138,5 +138,10 @@
             lấy ds user trả về theo định dạng viewModelResult
             </summary>
         </member>
+        <member name="T:QLNH_WEBAPIs.Controllers.UserLoginController">
+            <summary>
+            API liên quan login
+            </summary>
+        </member>
     </members>
 </doc>

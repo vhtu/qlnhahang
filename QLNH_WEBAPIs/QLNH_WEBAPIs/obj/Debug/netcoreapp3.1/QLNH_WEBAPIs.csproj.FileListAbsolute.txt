@@ -66,3 +66,13 @@ F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Mic
 F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Castle.Core.dll
 F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\QLNH_WEBAPIs.StaticWebAssets.xml
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using QLNH_WEBAPIs.Configurations;
 using QLNH_WEBAPIs.Models;
@@ -11,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace QLNH_WEBAPIs.Data
 {
-    public class QuanlynhahangContext : DbContext
+    public class QuanlynhahangContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
 
         //private string connect_str = "Server=localhost;Database=quanlynhahang;Port=3306; uid=root; password=";
@@ -30,6 +32,8 @@ namespace QLNH_WEBAPIs.Data
         public DbSet<Status> Statuses { set; get; }      // bảng items
         public DbSet<Unit> Units { set; get; }      // bảng items
         public DbSet<UnitType> UnitTypes { set; get; }      // bảng items
+        public DbSet<AppUser> AppUsers { set; get; }      // bảng items
+        public DbSet<AppRole> AppRoles { set; get; }      // bảng items
         public object Configuration { get; }
 
 
@@ -75,6 +79,18 @@ namespace QLNH_WEBAPIs.Data
             // khi định nghĩa Fluent API như ở bên trên (Category) có thể quá dài, we có thể tách ra thành file Configuration và add vào bên dưới
             modelBuilder.ApplyConfiguration(new GuestConfiguration());
             modelBuilder.ApplyConfiguration(new GuestTableConfiguration());
+
+            modelBuilder.ApplyConfiguration(new AppUserConfiguration());
+            modelBuilder.ApplyConfiguration(new AppRoleConfiguration());
+
+            modelBuilder.Entity<IdentityUserClaim<Guid>>().ToTable("AppUserClaims");
+            modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("AppUserRoles").HasKey(x => new { x.UserId, x.RoleId });
+            modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("AppUserLogins").HasKey(x => x.UserId);
+
+            modelBuilder.Entity<IdentityRoleClaim<Guid>>().ToTable("AppRoleClaims");
+            modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("AppUserTokens").HasKey(x => x.UserId);
+
+
         }
     }
 }

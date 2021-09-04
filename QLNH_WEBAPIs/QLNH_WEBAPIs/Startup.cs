@@ -1,21 +1,18 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using QLNH_WEBAPIs.Data;
+using QLNH_WEBAPIs.Models;
+using QLNH_WEBAPIs.Services.UserLogin;
 using QLNH_WEBAPIs.Services.Users;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace QLNH_WEBAPIs
 {
@@ -36,8 +33,20 @@ namespace QLNH_WEBAPIs
 
             services.AddDbContext<QuanlynhahangContext>(options => options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
 
+            services.AddIdentity<AppUser, AppRole>()
+                .AddEntityFrameworkStores<QuanlynhahangContext>()
+                .AddDefaultTokenProviders();
+
             //Declare DI
             services.AddTransient<IUserService, UserService>();
+            //services.AddTransient<UserManager<User>, UserManager<User>>();
+            //services.AddTransient<SignInManager<User>, SignInManager<User>>();
+            //services.AddTransient<IUserLoginService, UserLoginService>();
+
+            services.AddTransient<UserManager<AppUser>, UserManager<AppUser>>();
+            services.AddTransient<SignInManager<AppUser>, SignInManager<AppUser>>();
+            services.AddTransient<RoleManager<AppRole>, RoleManager<AppRole>>();
+            services.AddTransient<IUserLoginService, UserLoginService>();
 
 
             services.AddControllers();
