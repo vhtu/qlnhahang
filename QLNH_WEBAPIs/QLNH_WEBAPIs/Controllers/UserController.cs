@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using QLNH_WEBAPIs.DTOs.User;
 using QLNH_WEBAPIs.Models;
 using QLNH_WEBAPIs.Services.Users;
@@ -34,6 +35,7 @@ namespace QLNH_WEBAPIs.Controllers
         /// </summary>
         /// <returns>User</returns>
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create([FromForm] UserCreateRequest request)
         {
             var userId = await _userService.Create(request);

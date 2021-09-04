@@ -76,3 +76,7 @@ F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Mic
 F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Couses\qlnhahang\webAPI\QLNH_WEBAPIs\QLNH_WEBAPIs\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
